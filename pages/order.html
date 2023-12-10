@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/order.css">
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+<!-- Header -->
+    <section id="header">
+        <img id="header-bg" src="../assets/img/header-background - Copy.jpeg">
+        <div class="logo-text">
+            <img id="logo" src="../assets/img/logo.png" alt="our-logo">
+            <div class="header-text">
+                <h1>GentaKopi</h1>
+                <p>Because life is worth living</p>
+            </div>
+        </div>
+    <nav id="navbar">
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link" href="../pages/menu.html">Menu</a>
+        <a class="nav-link" href="#footer">About Us</a>
+        <a class="nav-link" href="#order">Order Now</a>
+    </nav>
+    <script src="../script/navbar.js"></script>
+    </section>
+<!-- End Header -->
+    
+<!-- Order -->
+    <div id="order">
+        <div id="online-order">
+            <div id="onlineText">
+                <p>Online Order</p>
+            </div>
+            <div id="online-content">
+                <p>Get our best drinks and food in just a few clicks!</p>
+                <div id="links">
+                    <div id="link-content">
+                        <a href="https://gojek.com/en-id/" target="_blank">
+                            <img src="../assets/img/gojek-logo.png">
+                        </a>
+                        <a href="https://grab.com/id/" target="_blank">
+                            <img src="../assets/img/grab-logo.png">
+                        </a>
+                        <a href="https://shopee.co.id/m/shopeefood/" target="_blank">
+                            <img src="../assets/img/shopeefood-logo.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="offline-order">
+            <div id="offlineText">
+                <p>Offline Order</p>
+            </div>
+            <div id="offline-content">
+                <p>NEW! Order without queuing at our shop. Just sit and relax!
+                    <br>Add your order to cart, Click "Order", and we will bring them to your table!
+                </p>
+                <div id="order-form">
+                    <form id="form-content" onsubmit="changeSendBtn()">
+                        <label for="custName">Hi, I am : </label>
+                        <input type="text" name="custName" id="custName" placeholder="Enter your name here..." required>
+                        <label for="table">At table number: </label>
+                        <input type="number" name="table" id="table" min="1" max="10" placeholder="1~10" required>
+                        <div id="beverage-input">
+                            <div id="drink-name">
+                                <label for="drinks">Beverages: </label>
+                                <select name="drinks" id="drinks">
+                                    <option value="None" selected>None</option>
+                                    <optgroup label="Coffee">
+                                        <option value="Espresso">Espresso (Ice 20, Hot 20)</option>
+                                        <option value="Americano">Americano (Ice 25, Hot 25)</option>
+                                        <option value="Latte">Latte (Ice 30, Hot 30)</option>
+                                        <option value="Cappucino">Cappucino (Ice 30, Hot 30)</option>
+                                        <option value="Macchiato">Macchiato (Ice 25, Hot 25)</option>
+                                        <option value="Mocha">Mocha (Ice 35, Hot 35)</option>
+                                        <option value="Affogato">Affogato (Ice 40)</option>
+                                        <option value="Flat-White">Flat White (Ice 30, Hot 30)</option>
+                                        <option value="Cortado">Cortado (Ice 25, Hot 25)</option>
+                                        <option value="Cold-Brew-Coffee">Cold Brew Coffee (Ice 35)</option>
+                                        <option value="Nitro-Cold-Brew">Nitro Cold Brew (Ice 40)</option>
+                                        <option value="Frappuccino">Frappuccino (Ice 35)</option>
+                                        <option value="Turkish-Coffee">Turkish Coffee (Ice 25)</option>
+                                        <option value="Red-Eye">Red Eye (Hot 35)</option>
+                                    </optgroup>
+                                    <optgroup label="Non-Coffee">
+                                        <option value="Hot-Chocolate">Hot Chocolate (Hot 25)</option>
+                                        <option value="Matcha-Latte">Matcha Latte (Ice 35)</option>
+                                        <option value="Squeezed-Lemonade">Squeezed Lemonade (Ice 25)</option>
+                                        <option value="Smoothies">Smoothies (Ice 30)</option>
+                                        <option value="Tea">Tea (Ice 15, Hot 15)</option>
+                                        <option value="Italian-Soda">Italian Soda (Ice 25)</option>
+                                        <option value="Virgin-Mojito">Virgin Mojito (Ice 35)</option>
+                                        <option value="Mango-Tango">Mango Tango (Ice 25)</option>
+                                        <option value="Lemon-Tea">Lemon Tea (Ice 20)</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div id="hot-cold">
+                                <label for="drinkType">Iced or Hot?</label>
+                                <select name="drinkType" id="drinkType" disabled>
+                                    <option value="" id="blank">-</option>
+                                    <option value="Iced" id="iced">Iced</option>
+                                    <option value="Hot" id="hot">Hot</option>
+                                </select>
+                            </div>
+                            <script src="../script/changeOption.js"></script>
+                        </div>
+                        <label for="foods">Foods: </label>
+                        <select name="foods" id="foods">
+                            <option value="None">None</option>
+                           <optgroup label="Sandwich">
+                            <option value="Chicken-Avocado-Club">Chicken Avocado Club (35)</option>
+                            <option value="Turkey-and-Cranberry-Panini">Turkey and Cranberry Panini (40)</option>
+                            <option value="Caprese-Sandwich">Caprese Sandwich (35)</option> 
+                            <option value="Smoked-Salmon-Bagel">Smoked Salmon Bagel (30)</option>
+                            <option value="Vegetarian-Hummus-Warp">Vegetarian Hummus Warp (25)</option>
+                           </optgroup>
+                           <optgroup label="Croissant"> ()
+                            <option value="Spinach-and-Feta-Stuffed">Spinach and Feta Stuffed (30)</option>
+                            <option value="Ham-and-Cheese-Croissant">Ham and Cheese Croissant (35)</option>
+                            <option value="Almond-Croissant">Almond Croissant (25)</option>
+                            <option value="Chocolate-Hazelnut">Chocolate-Hazelnut (30)</option>
+                            <option value="Blueberry-Cream-Cheese">Blueberry Cream Cheese (30)</option> 
+                           </optgroup> 
+                           <optgroup label="Toast">
+                            <option value="Avocado-Toast">Avocado Toast (35)</option> 
+                            <option value="Smashed-Berry-Ricotta">Smashed Berry Ricotta (40)</option>
+                            <option value="Maple-Almond-Butter-Banana">Maple Almond Butter Banana (30)</option>
+                            <option value="Prosciutto-and-Fig-Jam">Prosciutto and Fig Jam (30)</option>
+                            <option value="Classic-French-Toast">Classic French Toast (35)</option>
+                           </optgroup>
+                           <optgroup label="Croffle">
+                            <option value="Savory-Bacon-and-Egg">Savory Bacon and Egg (35)</option>
+                            <option value="Sweet-Cinnamon-Sugar">Sweet Cinnamon Sugar (25)</option>
+                            <option value="Berries-and-Cream">Berries and Cream (30)</option>
+                            <option value="Chocolate-Drizzle">Chocolate Drizzle (30)</option>
+                            <option value="Maple-Pecan">Maple Pecan (35)</option>
+                           </optgroup>
+                        </select>
+                        <label for="note">Additional note:</label>
+                        <textarea name="note" id="note" rows="10" placeholder="ex: Less sugar, extra ice, etc"></textarea>
+                        <button type="submit" name="submitOrder" id="submitOrder">
+                            <span id="orderDefault"><i class="fa-solid fa-cart-shopping" style="color: #3f1d00;"></i> Order Now</span>
+                            <span id="orderSent"><i class="fa-regular fa-square-check" style="color: #3f1d00;"></i> Order Added! We will bring it to your table when it's done!</span>
+                        </button>
+                    </form>
+                    <script src="../script/submitOrder.js"></script>
+                    <img src="../assets/img/order-content-img.png">
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- End Order -->
+
+<!-- Footer-->
+    <footer id="footer">
+        <div class="media-social">
+            <div id="icons">
+                <a href="https://instagram.com/gentaabhuana_" target="_blank"><i class="fa-brands fa-instagram" style="color: #ffffff; font-size: 40px;"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100088851060285&mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook" style="color: #ffffff; font-size: 40px;"></i></a>
+                <a href="https://wa.me/62881037321164" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #ffffff; font-size: 40px;"></i></a>
+            </div>
+        </div>
+        <div class="footer-text">
+            <div class="about">
+                <p id="title-text">ABOUT US</p>
+                <p>GentaKopi is a small coffee shop that was founded in early 2023.
+                    We provide the best food and drinks wholeheartedly for you everyday.</p>
+            </div>
+            <div class="locate">
+                <p id="title-text">OUR LOCATION</p>
+                <p>Jl. Raya Laplapan Gg. Mawar, Petulu,</p>
+                <p>Kabupaten Gianyar, Bali</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p id="copyright-text">© 2023 GentaKopi</p>
+        </div>
+    </footer>
+    <div class="overlay-button">
+        <button id="open-btn">
+            <span id="btn-text">Send Your Feedback!&nbsp;</span>
+            <span id="btn-icon"><i class="fa-regular fa-message" style="color: #5b2900;"></i></span>
+        </button>
+    </div>
+<!-- Feedback overlay -->
+    <div id="overlay-content">
+        <div class="feedback-form">
+            <div class="top-text">
+                <button id="close-btn"><i class="fa-solid fa-xmark" style="color: #5b2900;"></i></button>
+                <p id="feed-txt">Help us improve by sharing your feedback!</p>
+            </div>
+            <div class="logo-feed">
+                <img style="height: 120px; width: 120px;" src="../assets/img/logo.png">
+                <h1>GentaKopi</h1>
+            </div>
+            <form id="feedback" onsubmit="changeSubBtn()">
+                <label for="name">Name<span style="color: red ;">*</span> :</label>
+                <input id="name" name="name" type="text" placeholder="Enter your name... " required>
+                <label for="email">Email<span style="font-size: 10px;"> (optional)</span> :</label>
+                <input id="email" name="email" type="email" placeholder="Enter your email... ">
+                <label for="message">Message<span style="color: red;">*</span> :</label>
+                <textarea id="message" name="message" required rows="5" placeholder="Enter your message..."></textarea>
+                <button type="submit" name="submit" id="submitBtn">
+                    <span id="beforeSent">Submit</span>
+                    <span id="afterSent">Submitted <i class="fa-regular fa-circle-check fa-xl" style="color: #5b2900;"></i></span>
+                </button>
+            </form>
+            <script src="../script/submitFeedback.js"></script>
+        </div>
+    </div>
+    <script src="../script/overlay+button.js"></script>
+</body>
+</html>
