@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Shadows+Into+Light&display=swap');
+
+:root {
+    --color-primary-0: #A85006;	/* Main Primary color */
+    --color-primary-1: #E48C43;
+    --color-primary-2: #CC6A18;
+    --color-primary-3: #863D00;
+    --color-primary-4: #5B2900;
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body { overflow-x: hidden; }
+
+header {
+    background-image: url(../assets/img/header-background\ -\ Copy.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+#header-text { margin: auto 15px; }
+#header-text h1 { font-family: 'Dancing Script'; }
+#logo {
+    width: 140px;
+    height: 140px;
+}
+#nav {
+    background-color: var(--color-primary-4);
+    height: 2.78rem;
+}
+
+#carousel {
+    margin: 2rem auto;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+#words {
+    background-color: #5B2900;
+    z-index: 999;
+    position: absolute;
+    bottom: 3rem;
+}
+#words h2 {
+    padding: 10px;
+    color: #fff;
+    margin: 0 auto;
+}
+footer {
+    background-color: var(--color-primary-4);
+    height: 340px;
+    display: block;
+}
+#footer-content { margin-top: 1.7rem; }
+#media-social {
+    background-color: #532601;
+    height: 4.1rem;
+}
+#toggle_button {
+    position: fixed;
+    z-index: 9999;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.25);
+    border-radius: 50px;
+}
+#expandButton {
+    border-radius: 50px;
+    padding: 9px;
+    cursor: pointer;
+}
+#btn-text {
+    max-width: 0;
+    transition: max-width 1s;
+    white-space: nowrap;
+    font-size: 16px;
+    color: var(--color-primary-4);
+}
+
+/* bikin web nya responsive! */
+@media (max-width: 768px) {
+    #carousel {
+        padding: 0;
+        margin: 0 auto;
+    }
+    #nav {
+        height: 100%;
+    }
+    #words {
+        bottom: 2rem;
+    }
+    #words h2 {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
