@@ -32,7 +32,9 @@ header {
     background-color: var(--color-primary-4);
     height: 2.78rem;
 }
-
+.nav-link:hover {
+    background-color: var(--color-primary-3);
+}
 #carousel {
     margin: 2rem auto;
     padding: 15px;

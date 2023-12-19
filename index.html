@@ -35,9 +35,9 @@
           <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
             <div class="navbar-nav nav-pills gap-3">
               <a class="nav-link text-light" href="#carousel">Home</a>
-              <a class="nav-link text-light" href="pages/menu2.html">Menu</a>
+              <a class="nav-link text-light" href="pages/menu.html">Menu</a>
               <a class="nav-link text-light" href="#footer-content">About Us</a>
-              <a class="nav-link text-light" href="pages/order2.html">Order Now<span style="color: red;">*</span></a>
+              <a class="nav-link text-light" href="pages/order.html">Order Now<span style="color: red;">*</span></a>
             </div>
           </div>
         </div>
@@ -110,26 +110,28 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form>
+            <form id="feedback_form">
               <div class="mb-3">
-                <label for="nameInput" class="form-label">Name:</label>
-                <input type="email" class="form-control" id="nameInput">
-                <label for="emailInput" class="form-label">Email:</label>
-                <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp">
+                <label for="name" class="form-label">Name:</label>
+                <input name="name" type="name" class="form-control" id="name" required>
+                <label for="email" class="form-label">Email <span style="font-size: 10px;">(optional)</span> :</label>
+                <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp">
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
               </div>
               <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Messages:</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <label for="message" class="form-label">Messages:</label>
+                <textarea name="message" class="form-control" id="message" rows="3" required></textarea>
               </div>
             </form>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
-          </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary" form="feedback_form">Submit</button>
+            </div>
         </div>
       </div>
     </div>
+    <script src="script/submitFeedback.js"></script>
+    <!-- End of Overlay Content-->
 </body>
 </html>
