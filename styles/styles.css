@@ -1,48 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Shadows+Into+Light&display=swap');
 
-:root {
-    --color-primary-0: #A85006;	/* Main Primary color */
-    --color-primary-1: #E48C43;
-    --color-primary-2: #CC6A18;
-    --color-primary-3: #863D00;
-    --color-primary-4: #5B2900;
-    }
+:root {	/* Main Primary color */
+    --color-primary-0: #D2E3C8;
+    --color-primary-1: #86A789;
+    --color-primary-2: #4F6F52;
+    --color-primary-3: #435542;
+    --color-primary-4: #739072;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body { overflow-x: hidden; }
-
-header {
-    background-image: url(../assets/img/header-background\ -\ Copy.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
+.check {
+    border: 1px solid red;
 }
-#header-text { margin: auto 15px; }
-#header-text h1 { font-family: 'Dancing Script'; }
+body::-webkit-scrollbar {
+    width: 7px;
+    background-color: #75b37a;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #356832;
+    border-radius: 5px;
+}
+
+/* Section */
+section {
+    padding: 50px 0;
+}
+.section-title {
+    text-align: center;
+    padding-bottom: 20px;
+    color: var(--color-primary-1);
+}
+.section-title h2 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+.section-title h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 300px;
+    height: 3px;
+    background: #fff;
+    bottom: 1px;
+    left: calc(50% - 150px);
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #fff;
+}
+#header-text {
+    margin-left: calc(1rem * 2);
+    color: var(--color-primary-2); 
+}
+#header-text h2 { font-family: 'Dancing Script'; }
 #logo {
     width: 140px;
     height: 140px;
 }
+
+/* Navbar */
 #nav {
-    background-color: var(--color-primary-4);
-    height: 2.78rem;
-}
-.nav-link:hover {
     background-color: var(--color-primary-3);
+    height: 2.78rem;
+    z-index: 9999 !important;
+}
+.nav-link { padding: 5px !important; }
+.nav-link:hover {
+    background-color: var(--color-primary-2);
+}
+
+/* Slideshow */
+#slideshow {
+    background-color: var(--color-primary-0);
 }
 #carousel {
-    margin: 2rem auto;
+    margin: 1rem auto;
     padding: 15px;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: #4d7850;
+}
+#carousel img {
+    height: 38rem;
+    object-fit: cover;
+    border: 1px solid var(--color-primary-3);
 }
 #words {
-    background-color: #5B2900;
+    background-color: var(--color-primary-3);
     z-index: 999;
     position: absolute;
     bottom: 3rem;
@@ -52,51 +104,125 @@ header {
     color: #fff;
     margin: 0 auto;
 }
-footer {
-    background-color: var(--color-primary-4);
-    height: 340px;
-    display: block;
+
+/* List */
+#list {
+    background-color: var(--color-primary-1);
 }
-#footer-content { margin-top: 1.7rem; }
-#media-social {
-    background-color: #532601;
-    height: 4.1rem;
+#list .section-title {
+    color: var(--color-primary-3);
 }
-#toggle_button {
-    position: fixed;
-    z-index: 9999;
-    bottom: 20px;
-    right: 20px;
-    box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.25);
-    border-radius: 50px;
+.items-wrap {
+    position: relative;
+    margin: 0 0 20px;
 }
-#expandButton {
-    border-radius: 50px;
-    padding: 9px;
+.items-info {
+    text-align: center;
+    color: #000;
+    z-index: 2;
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: all ease-in-out 0.3s;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.items-info:hover {
+    opacity: 1;
     cursor: pointer;
 }
-#btn-text {
-    max-width: 0;
-    transition: max-width 1s;
-    white-space: nowrap;
-    font-size: 16px;
-    color: var(--color-primary-4);
+
+/* About Platycerium */
+#about {
+    background-color: var(--color-primary-4);
+    color: var(--color-primary-0);
+}
+#about .section-title {
+    color: var(--color-primary-3);
+}
+
+/* Contact */
+#contact {
+    background-color: var(--color-primary-3);
+}
+.form-group {
+    margin-top: 0.5rem;
+}
+.form-control {
+    background-color: var(--color-primary-0) !important;
+}
+#submitBtn {
+    padding: 10px 20px;
+    background-color: #4F6F52;
+    border-radius: 50px;
+    border: none;
+    color: #ddd;
+    transition: 0.3s;
+}
+#submitBtn:hover {
+    background-color: #456148;
+}
+
+/* Footer */
+footer {
+    background-color: #233422;
+    height: 325px;
+}
+#footer-content {
+    margin-top: 1.7rem;
+    gap: 20px;
+ }
+#footer-line {
+    background-color: var(--color-primary-2);
+    height: 10px;
+}
+#copyright {
+    position: relative;
+    bottom: -70px;
 }
 
 /* bikin web nya responsive! */
-@media (max-width: 768px) {
-    #carousel {
-        padding: 0;
-        margin: 0 auto;
+@media (max-width: 767.98px) {
+
+    /* Header */
+    header {
+        height: 100px;
+    }
+    #header-text {
+        position: relative;
+        top: 10px;
     }
     #nav {
         height: 100%;
     }
+    #logo {
+        height: 90px;
+        width: 90px;
+    }
+
+    /* Main */
+    #slideshow { padding: 0;}
+    #carousel {
+        padding: 0;
+        margin: 0 auto;
+    }
+    #carousel img { height: 15rem; }
     #words {
         bottom: 2rem;
     }
     #words h2 {
         font-size: 12px;
         padding: 5px;
+    }
+
+    /* Footer */
+    footer p {
+        font-size: 12px;
+    }
+    #copyright {
+        bottom: -40px;
     }
 }

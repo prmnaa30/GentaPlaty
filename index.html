@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <!--Bootstrap-->
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="plugins/glightbox/css/glightbox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet" href="styles/styles.css">
+
     <!--JQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
@@ -15,123 +18,261 @@
 
       });
     </script>
-    <title>GentaKopi</title>
+    
+    <title>Genta's Platy</title>
 </head>
-<body style="background-color: #E48C43;">
-    <header style="height: 140px; width: 100%;">
+<body class="overflow-x-hidden">
+    <header>
         <div id="logo+text" class="d-flex flex-row flex-nowrap align-content-center">
-            <img src="assets/img/logo.png" alt="logo" id="logo">
-            <div class="d-flex flex-column align-self-center" id="header-text">
-                <h1>GentaKopi</h1>
-                <p>Because life is worth living</p>
+            <div class="d-flex flex-column justify-content-cent mt-3 mb-1" id="header-text">
+                <h2 class="mb-0">Genta's Platy</h2>
+                <p>It's Green!</p>
             </div>
         </div>
     </header>
-    <nav class="navbar navbar-expand-lg" id="nav">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-            <div class="navbar-nav nav-pills gap-3">
-              <a class="nav-link text-light" href="#carousel">Home</a>
-              <a class="nav-link text-light" href="pages/menu.html">Menu</a>
-              <a class="nav-link text-light" href="#footer-content">About Us</a>
-              <a class="nav-link text-light" href="pages/order.html">Order Now<span style="color: red;">*</span></a>
-            </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar z-3 navbar-expand-lg sticky-top" id="nav">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+          <div class="navbar-nav nav-pills gap-3">
+            <a class="nav-link text-light" href="#slideshow">Home</a>
+            <a class="nav-link text-light" href="#list">Collection</a>
+            <a class="nav-link text-light" href="#about">About Us</a>
+            <a class="nav-link text-light" href="#contact">Contact</a>
           </div>
         </div>
-      </nav>
-      <div class="container-md" id="carousel">
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="assets/img/coffee1.jpg" class="d-block w-100" alt="...">
+      </div>
+    </nav>
+
+      <!--Slideshow-->
+      <section id="slideshow">
+        <div class="container-lg" id="carousel">
+          <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/img/IMG_Slide1.jpg" class="d-block w-100" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/IMG_Slide2.jpg" class="d-block w-100" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/IMG_Slide3.jpg" class="d-block w-100" alt="Slide 3">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/IMG_Slide4.png" class="d-block w-100" alt="Slide 4">
+                </div>
               </div>
-              <div class="carousel-item">
-                <img src="assets/img/coffee2.jpg" class="d-block w-100" alt="...">
+              <div id="words">
+                <h2>Platycerium ! ! !</h2>
               </div>
-              <div class="carousel-item">
-                <img src="assets/img/coffee3.jpg" class="d-block w-100" alt="...">
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+        </div>
+      </section>
+      
+
+    <!-- LIST -->
+    <section id="list">
+      <div class="section-title">
+        <h2 class="fs-2">What do we have here?</h2>
+        <p class="mt-3">Here's the list of platycerium that we offer to you. <strong>Click</strong> it for more details!</p>
+      </div>
+
+      <div class="container-lg" id="list-container">
+        <div class="row justify-content-center">
+        
+          <div class="col-lg-3">
+            <div class="items-wrap">
+              <a href="assets/img/elephantotis.jpg" class="glightbox1" data-glightbox="title: Elephantotis; description: .custom-desc1; descPosition: right;">
+                <img src="assets/img/elephantotis.jpg" class="img-fluid" alt="image">
+                <div class="items-info">
+                  <h4>Elephantotis</h4>
+                </div>
+              </a>
+              <div class="glightbox-desc custom-desc1">
+                <p>Platycerium Elephantotis, commonly known as the Staghorn Fern, is a unique and beautiful plant that belongs to the Polypodiaceae family.</p>                  
+                <p>IDR <span class="price">1.200.000</span></p>
+                <a href="" class="btn btn-success">Buy</a>                  
               </div>
             </div>
-            <div id="words">
-              <h2>We Open Every Day!</h2>
+          </div>
+  
+          <div class="col-lg-3">
+            <div class="items-wrap">
+              <a href="assets/img/coronarium.jpg" class="glightbox1" data-glightbox="title: Coronarium; description: .custom-desc2; descPosition: right;">
+                <img src="assets/img/coronarium.jpg" class="img-fluid" alt="image">
+                <div class="items-info">
+                  <h4>Coronarium</h4>
+                </div>
+              </a>
+              <div class="glightbox-desc custom-desc2">
+                <p>Platycerium coronarium or Staghorn Fern is an epiphytic fern that can grow to 3 m long and 1.5 wide.</p>               
+                <p>IDR <span class="price">1.500.000</span></p>
+                <a href="" class="btn btn-success">Buy</a>
+              </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+          </div>
+  
+          <div class="col-lg-3">
+            <div class="items-wrap">
+              <a href="assets/img/panama.jpg" class="glightbox1" data-glightbox="title: Panama; description: .custom-desc3; descPosition: right;">
+                <img src="assets/img/panama.jpg" class="img-fluid" alt="image">
+                <div class="items-info">
+                  <h4>Panama</h4>
+                </div>
+              </a>
+              <div class="glightbox-desc custom-desc3">
+                <p>The fertile fronds are wide like a typical Platycerium Hillii. What makes the Platycerium Panama unique is a small platycerium and slow growing.</p>
+                <p>IDR <span class="price">2.000.000</span></p>
+                <a href="" class="btn btn-success">Buy</a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-lg-3">
+            <div class="items-wrap">
+              <a href="assets/img/ridleyi.jpg" class="glightbox1" data-glightbox="title: Ridleyi; description: .custom-desc4; descPosition: right;">
+                <img src="assets/img/ridleyi.jpg" class="img-fluid" alt="image">
+                <div class="items-info">
+                  <h4>Ridleyi</h4>
+                </div>
+              </a>
+              <div class="glightbox-desc custom-desc4">
+                <p>Ridley's Staghorn Fern was named after the first director of the Singapore Botanic Gardens, Sir Henry Nicholas Ridley, who made exceptional contributions to the region's botany, natural history and economy in the 1880s.</p>                
+                <p>IDR <span class="price">500.000</span></p>
+                <a href="" class="btn btn-success">Buy</a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-lg-3">
+            <div class="items-wrap">
+              <a href="assets/img/Grande.jpg" class="glightbox1" data-glightbox="title: Grande; description: .custom-desc5; descPosition: right;">
+                <img src="assets/img/Grande.jpg" class="img-fluid" alt="image">
+                <div class="items-info">
+                  <h4>Grande</h4>
+                </div>
+              </a>
+              <div class="glightbox-desc custom-desc5">
+                <p>Platycerium Grande, also known as giant staghorn fern, is a species of epiphytic fern in the family Polypodiaceae. It is native to the tropical rainforests of Southeast Asia, including Indonesia, Malaysia, and the Philippines.</p>
+                <p>IDR <span class="price">1.000.000</span></p>
+                <a href="" class="btn btn-success">Buy</a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-lg-3">
+            <div class="items-wrap">
+              <a href="assets/img/bifurcatum.jpg" class="glightbox1" data-glightbox="title: Bifurcatum; description: .custom-desc6; descPosition: right;">
+                <img src="assets/img/bifurcatum.jpg" class="img-fluid" alt="image">
+                <div class="items-info">
+                  <h4>Bifurcatum</h4>
+                </div>
+              </a>
+              <div class="glightbox-desc custom-desc6">
+                <p>Platycerium Bifurcatum is the species most commonly cultivated as an ornamental plant, since it is probably the easiest to grow. Native to rainforests of Java, New Guinea and southeastern Australia, it does best with year-round temperatures above 40°F, so it can only be grown in gardens with a very mild climate (zones 9 and above) or as a house plant that can be moved outdoors during the summer. It has naturalized in Florida and Hawaii, where it is considered an invasive species on the islands.</p>
+                <p>IDR <span class="price">2.500.000</span></p>
+                <a href="" class="btn btn-success">Buy</a>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+      
+      
+    </section>
+
+    <!--About Platycerium-->
+    <section id="about">
+      <div class="container-md">
+        <div class="section-title">
+          <h2 class="section-title">About Us</h2>
+        </div>
+        <p class="text-justify">Welcome to Genta's Platy! dedicated to introducing the beauty and benefits of the Platycerium plant. 
+          With passion, aspire to bring natural beauty into your life through our superior products. 
+          With love and expertise, we present a collection of high-quality Platycerium plants as well as creative products that exude the uniqueness of nature. 
+          <br><br>
+          At Genta's Platy, not only offer exotic plants, but also tell stories of sustainability and local enterprise. Every purchase from us is direct support
+          for small farms and nature conservation. Join us in building a community that cares about the environment while appreciating the beauty of the Platycerium plant. 
+          Thank you for being part of this journey of goodness with Genta's Platy.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="cointainer-lg">
+          <div class="section-title">
+              <h2>Contacts</h2>
+              <p>Got any question or messages? Send it here!</p>
+          </div>
+          <div class="container-lg d-flex flex-row justify-content-center" style="gap: 50px;">
+
+              <div class="col-lg-6">
+                  <form id="contact-form" onsubmit="return postToGoogle()">
+                      <div class="row">
+                        <div class="col-md-6 form-group">
+                          <input type="name" class="form-control" name="entry.1783196306" placeholder="Your Name" id="name" required>
+                        </div>
+                        <div class="col-md-6 form-group">
+                          <input type="email" class="form-control" name="entry.1327648210" placeholder="Your Email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control" name="entry.909012860" placeholder="Your Phone Number" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                          <textarea class="form-control" name="entry.741269265"  placeholder="Message" rows="5" id="message" required></textarea>
+                        </div>
+                        <div class="text-center mt-2"><button type="submit" id="submitBtn">Send Message</button></div>
+                      </div>
+                  </form>
+              </div>
+                  
+              </div>
+          </div> 
+      </div>
+      
+  </section>
+    
+    <!-- FOOTER -->
+    <footer>
+      <div class="d-flex align-items-center" id="footer-line"></div>
+      <div class="container-fluid d-flex flex-column justify-content-center text-center" id="footer-content">
+          <div class="d-flex flex-column text-light col">
+              <p>OUR LOCATION</p>
+              <p>Jl. Raya Laplapan Gg. Mawar, Petulu, Kabupaten Gianyar, Bali</p>
+          </div>
+          <div class="d-flex flex-column text-light">
+            <p>OUR SOCIAL MEDIA</p>
+            <div class="d-flex flex-row justify-content-center" style="gap: 3rem;">
+              <a href="https://instagram.com/gentaabhuana_" target="_blank"><i class="fa-brands fa-instagram" style="color: #ffffff; font-size: 40px;"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100088851060285&mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook" style="color: #ffffff; font-size: 40px;"></i></a>
+              <a href="https://wa.me/62881037321164" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #ffffff; font-size: 40px;"></i></a>
+            </div>
           </div>
       </div>
-      <footer>
-        <div class="d-flex align-items-center" id="media-social">
-            <div class="d-flex" style="gap: 1rem; margin-left: 2rem;">
-                <a href="https://instagram.com/gentaabhuana_" target="_blank"><i class="fa-brands fa-instagram" style="color: #ffffff; font-size: 40px;"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=100088851060285&mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook" style="color: #ffffff; font-size: 40px;"></i></a>
-                <a href="https://wa.me/62881037321164" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #ffffff; font-size: 40px;"></i></a>
-            </div>
-        </div>
-        <div class="container-fluid d-flex flex-row gap-xxl-5" id="footer-content" style="margin-left: 1.2rem;">
-            <div class="d-flex flex-column text-light col-3">
-                <p>ABOUT US</p>
-                <p>GentaKopi is a small coffee shop that was founded in early 2023.
-                    We provide the best food and drinks wholeheartedly for you everyday.</p>
-            </div>
-            <div class="d-flex flex-column text-light col-2">
-                <p>OUR LOCATION</p>
-                <p>Jl. Raya Laplapan Gg. Mawar, Petulu, Kabupaten Gianyar, Bali</p>
-            </div>
-        </div>
-        <div class="text-light" style="margin-left: 1rem; margin: 5rem 0 0 1.9rem;">
-            <p>© 2023 GentaKopi</p>
-        </div>
+      <div class="text-light text-center" id="copyright">
+          <p>© 2023 Genta's Platy</p>
+      </div>
     </footer>
 
-    <!-- Overlay Button -->
-    <div id="toggle_button">
-      <button type="button" class="d-inline-flex overflow-hidden align-items-center justify-content-end position-relative border-0" id="expandButton" data-bs-toggle="modal" data-bs-target="#feedback_overlay">
-        <span id="btn-text" class="overflow-hidden">Send Your Feedback!&nbsp;</span>
-        <span id="btn-icon"><i class="fa-regular fa-message" style="color: #5b2900;"></i></span>
-      </button>
-    </div>
-    <script src="script/expandButton.js"></script>
+  <!-- Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="plugins/glightbox/js/glightbox.min.js"></script>
+  <script src="plugins/isotope.js/isotope.pkgd.min.js"></script>
 
-    <!-- Overlay Content -->
-    <div class="modal fade" id="feedback_overlay" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Help us improve by sharing your feedback!</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form id="feedback_form">
-              <div class="mb-3">
-                <label for="name" class="form-label">Name:</label>
-                <input name="name" type="name" class="form-control" id="name" required>
-                <label for="email" class="form-label">Email <span style="font-size: 10px;">(optional)</span> :</label>
-                <input name="email" type="email" class="form-control" id="email" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-              </div>
-              <div class="mb-3">
-                <label for="message" class="form-label">Messages:</label>
-                <textarea name="message" class="form-control" id="message" rows="3" required></textarea>
-              </div>
-            </form>
-          </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary" form="feedback_form">Submit</button>
-            </div>
-        </div>
-      </div>
-    </div>
-    <script src="script/submitFeedback.js"></script>
-    <!-- End of Overlay Content-->
+  <script src="script/main.js"></script>
 </body>
 </html>

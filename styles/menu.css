@@ -38,10 +38,54 @@ header {
 
 /* MENU CSS */
 
-#menu {
-    background-color: var(--color-primary-1);
+.container-check {
+    border: 1px solid red;
 }
 
+menu {
+    background-color: var(--color-primary-1);
+} 
+
+
+/* .text-inside {
+    font-size: clamp(5px, 15px, 25px);
+} */
+
+#bev-bg {
+    background-image: url('../assets/img/bev-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+#bev-img {
+    width: 300px;   
+}
+
+#food-bg {
+    background-image: url('../assets/img/food-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+#food-img {
+    width: 300px;
+}
+
+#bev-menu {
+    background-image: url(../assets/img/bevMenuBg.jpg);
+}
+
+#food-menu {
+    background-image: url(../assets/img/bevMenuBg.jpg);
+}
 
 /* MENU CSS */
 
