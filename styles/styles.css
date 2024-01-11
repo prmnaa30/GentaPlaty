@@ -184,6 +184,24 @@ footer {
     bottom: -70px;
 }
 
+/* back to top btn */
+.back-to-top {
+    height: 35px;
+    width: 35px;
+    color: #fff;
+    background-color: #326430;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-decoration: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+.back-to-top:hover {
+    background-color: #3a7538;
+}
+
 /* bikin web nya responsive! */
 @media (max-width: 767.98px) {
 
