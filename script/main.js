@@ -10,7 +10,32 @@ var lightboxDescription = GLightbox({
 });
 
 // isotope js sorting
+var $grid = $('#container-items').isotope({
+  itemSelector: '.list-items',
+  layoutMode: 'fitRows',
+  getSortData: {
+    name: '.name',
+    price: function( itemElem ) {
+      var price = $( itemElem ).find('.price').text();
+      return parseFloat( price.replace( /[\(\)]/g, '') );
+    }
+  }
+});
 
+// bind sort button click
+$('.sort-btn').on( 'click', 'button', function() {
+  var sortValue = $(this).attr('data-sort-value');
+  $grid.isotope({ sortBy: sortValue });
+});
+
+// change active class on buttons
+$('.btn-group').each( function( i, buttonGroup ) {
+  var $buttonGroup = $( buttonGroup );
+  $buttonGroup.on( 'click', 'button', function() {
+    $buttonGroup.find('.active').removeClass('active');
+    $( this ).addClass('active');
+  });
+});
 
 
 // send form data to gsheet via gform
@@ -40,4 +65,14 @@ function postToGoogle() {
       }
     });
     return false;
+}
+
+// back to top
+$(".back-to-top").click(function () { 
+  $(window).scrollTop(0);
+});
+
+// send wa ke genta
+function sendWa(jenis) {
+  window.open("https://wa.me/62881037782126?text=Halo%20Kak%2C%20untuk%20platycerium%20jenis%20" + jenis + "%20apakah%20tersedia%3F")
 }
