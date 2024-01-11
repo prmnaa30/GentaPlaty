@@ -134,6 +134,9 @@ header {
     opacity: 1;
     cursor: pointer;
 }
+.price {
+    visibility: hidden;
+}
 
 /* About Platycerium */
 #about {
